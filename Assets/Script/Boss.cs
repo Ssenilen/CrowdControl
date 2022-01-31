@@ -48,8 +48,7 @@ public class Boss : Enemy
     {
         yield return new WaitForSeconds(0.1f);
 
-        // int ranAction = Random.Range(0, 5); //행동패턴
-        int ranAction = 4;
+        int ranAction = Random.Range(0, 5); //행동패턴
         switch (ranAction)
         {
             case 0:
@@ -118,6 +117,7 @@ public class Boss : Enemy
         isLook = true;
         nav.isStopped = true;
         boxCollider.enabled = true;
+        
         StartCoroutine(Think());
     }
 }

@@ -18,7 +18,7 @@ public class BossRock : Bullet
 
     IEnumerator GainPowerTimer()
     {
-        yield return new WaitForSeconds(2.2f);
+        yield return new WaitForSeconds(0.6f);
         isShoot = true;
     }
 
@@ -26,8 +26,8 @@ public class BossRock : Bullet
     {
         while(!isShoot)
         {
-            angularPower += 0.02f * Time.deltaTime;
-            scaleValue += 0.01f;
+            angularPower += 0.02f;
+            scaleValue += 0.005f;
             transform.localScale = Vector3.one * scaleValue;
             rigid.AddTorque(transform.right * angularPower, ForceMode.Acceleration); // 지속증가
             yield return null;

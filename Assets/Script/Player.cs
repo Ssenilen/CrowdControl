@@ -347,7 +347,7 @@ public class Player : MonoBehaviour
                 StartCoroutine(OnDamage(isBossAtk));
             }
 
-            if (other.GetComponent<Bullet>() != null)
+            if (other.GetComponent<Rigidbody>() != null)
                 Destroy(other.gameObject);
         }
     }

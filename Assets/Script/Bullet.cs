@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other) 
+    void OnTriggerEnter(Collider other) 
     {
         if (!isMelee && other.gameObject.tag == "Wall")
         {
